@@ -2,6 +2,6 @@
 from flask import Flask
 app = Flask(__name__)
 
-@app.route("/city")
+@app.route("/")
 def display():
-  return "<p> Hello World <\p>"
+  return "Hello World"
