@@ -9,10 +9,8 @@ load_dotenv()
 API_KEY = os.getenv("API_KEY")
 BASE_URL = os.getenv("BASE_URL")
 
-def city_temp():
-  print("Choose a city to find the current temperature")
-  CITY = input()
-  URL = BASE_URL + "q=" + CITY + "&units=metric" + "&appid=" + API_KEY
+def City_temp(city: str):
+  URL = BASE_URL + "q=" + city + "&units=metric" + "&appid=" + API_KEY
   print(URL)
 
   response = requests.get(URL)
@@ -32,4 +30,4 @@ def city_temp():
 
   main = data['main']
   temp = main['temp']
-  print("Temperature:",temp) # Prints-> Temperature:  18.27 (celsius)
+  return temp
