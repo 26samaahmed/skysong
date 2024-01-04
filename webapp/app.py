@@ -9,7 +9,7 @@ def display():
   # If requesting info about a specific city
   if request.method == "GET":
     # If the user has yet to submit the name of a specific city/ is visiting the page for the first time, then display the start page asking for the city
-    if request.args.get("city") == None:
+    if request.args.get("city") == None: # Extract the city name from the URL
       return render_template("index.html")
     
     # If user attempts to click submit button without entering a city name to request the temp for
