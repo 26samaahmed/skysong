@@ -1,7 +1,17 @@
 html {
-  background-image: url(https://pbs.twimg.com/media/DamG-BLXcAM_8U_?format=jpg&name=large);
+  background-image: url(https://wallpapercave.com/wp/wp7595049.png);
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+h1, input{
+  text-align: center;
+}
+
+.input-container {
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
