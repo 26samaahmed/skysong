@@ -19,5 +19,5 @@ def display():
     # If the user submitted a city then display the temperature by calling the function from main.py and pass the input as the function's arguments. The temperature will be returned.
     else:
       city_name = request.args.get("city")
-      result = City_temp(city_name)
-      return render_template("response.html", result=result)
+      temperature = City_temp(city_name)
+      return render_template("response.html", city=city_name, temperature=temperature) # city and temperature are the value passed to HTML tempelate for rendering
