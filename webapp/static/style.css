@@ -4,9 +4,10 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: 'Press Start 2P'
 }
 
-h1, input{
+h1, h2, input{
   text-align: center;
 }
 
@@ -14,4 +15,22 @@ h1, input{
   justify-content: center;
   display: flex;
   align-items: center;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 5px;
+  font-size: 5px;
+}
+
+.intro{
+  font-size: 5px;
+  width: 200px;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+  line-height: 7px;
 }
