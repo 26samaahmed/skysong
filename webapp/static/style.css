@@ -13,7 +13,7 @@ h1, h2, input{
 
 .input-container {
   justify-content: center;
-  display: flex;
+  display: grid;
   align-items: center;
 }
 
@@ -33,4 +33,14 @@ h1, h2, input{
   margin-top: 20px;
   padding: 20px;
   line-height: 7px;
+}
+
+.display-container {
+  text-align: center;
+  margin: auto;
+  font-size: 10px;
+}
+
+.submit-button {
+  padding: auto;
 }

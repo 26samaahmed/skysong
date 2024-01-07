@@ -14,7 +14,7 @@ def City_temp(city: str):
   print(URL)
 
   response = requests.get(URL)
-  print(response.status_code) # Status code is 200. Add an if so that the code checks that is the status code before retrieving the data
+  print("status code:", response.status_code) # Status code is 200. Add an if so that the code checks that is the status code before retrieving the data
 
   # Retrieving the data in json format
   data = response.json()
@@ -30,4 +30,7 @@ def City_temp(city: str):
 
   main = data['main']
   temp = main['temp']
-  return temp
+  #feels_like = main['feels_like']
+  #print("Temperature feels like:", feels)
+  #print("Current temperature is:", int(temp))
+  return int(temp)
