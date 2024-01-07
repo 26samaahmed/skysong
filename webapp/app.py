@@ -1,5 +1,6 @@
 # Flask
 from flask import Flask, render_template, request
+from markupsafe import escape
 from main import City_temp
 
 app = Flask(__name__)
