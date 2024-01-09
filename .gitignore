@@ -2,3 +2,4 @@
 
 # Virtual Environment
 .env
+/example.json
