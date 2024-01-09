@@ -24,14 +24,14 @@ h1, h2, input{
   font-size: 5px;
 }
 
-.intro{
+.intro {
   font-size: 5px;
   width: 200px;
   text-align: center;
   align-items: center;
   margin: auto;
   margin-top: 20px;
-  padding: 20px;
+  padding: 15px;
   line-height: 7px;
 }
 
@@ -41,6 +41,19 @@ h1, h2, input{
   font-size: 10px;
 }
 
+.submit-button, .city-name {
+  margin: auto;
+  border-radius: 3px;
+  font-size: 7px;
+  font-family: 'Press Start 2P';
+  padding: 4px;
+}
+
+.city-name {
+  width: 80px;
+  border: none;
+}
+
 .submit-button {
-  padding: auto;
+  border-color: rgb(3, 79, 243);
 }
