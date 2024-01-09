@@ -20,40 +20,47 @@ h1, h2, input{
 .logo {
   position: absolute;
   top: 0;
-  left: 5px;
-  font-size: 5px;
+  left: 15px;
+  font-size: 30px;
 }
 
 .intro {
-  font-size: 5px;
-  width: 200px;
+  font-size: 28px;
+  width: 1200px;
   text-align: center;
   align-items: center;
   margin: auto;
-  margin-top: 20px;
-  padding: 15px;
-  line-height: 7px;
+  padding-bottom: 30px;
+  line-height: 40px;
 }
 
 .display-container {
   text-align: center;
   margin: auto;
-  font-size: 10px;
+  font-size: 30px;
 }
 
 .submit-button, .city-name {
   margin: auto;
-  border-radius: 3px;
-  font-size: 7px;
+  border-radius: 10px;
+  font-size: 30px;
   font-family: 'Press Start 2P';
-  padding: 4px;
+  padding: 20px;
 }
 
 .city-name {
-  width: 80px;
+  width: 330px;
   border: none;
 }
 
 .submit-button {
   border-color: rgb(3, 79, 243);
+  border-width: 7px;
+}
+
+.middle-text {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
