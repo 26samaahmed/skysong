@@ -1,7 +1,7 @@
 # Flask
 from flask import Flask, render_template, request
 from markupsafe import escape
-from main import city_temp
+from main import city_temp, min_temp, max_temp, sunset_time, sunrise_time
 
 app = Flask(__name__)
 
@@ -21,4 +21,8 @@ def display():
     else:
       city_name = request.args.get("city")
       temperature = city_temp(city_name)
-      return render_template("response.html", city=city_name, temperature=temperature) # city and temperature are the value passed to HTML tempelate for rendering
+      minimum_temp = min_temp(city_name)
+      maximum_temp = max_temp(city_name)
+      sunset = sunset_time(city_name)
+      sunrise = sunrise_time(city_name)
+      return render_template("response.html", city=city_name, temperature=temperature, minimum_temperature=minimum_temp, maximum_temperature=maximum_temp, sunset=sunset, sunrise=sunrise) 
