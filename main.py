@@ -1,5 +1,3 @@
-#TODO: start by retrieving the current weather for 1 city
-  #future implementation: have a page at the beginning that asks for what city the person wants to see the weather for
 import requests, json
 import os
 from dotenv import load_dotenv
@@ -48,4 +46,4 @@ def sunrise_time(city: str):
   sys = data['sys']
   sunrise_utc = sys['sunrise']
   sunrise = datetime.fromtimestamp(sunrise_utc)
-  return f"Sunrise is: {sunrise:%H:%M}"
+  return f"Sunset is: {sunrise:%H:%M}"
