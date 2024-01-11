@@ -1,7 +1,7 @@
 # Flask
 from flask import Flask, render_template, request
 from markupsafe import escape
-from main import City_temp
+from main import city_temp
 
 app = Flask(__name__)
 
@@ -20,5 +20,5 @@ def display():
     # If the user submitted a city then display the temperature by calling the function from main.py and pass the input as the function's arguments. The temperature will be returned.
     else:
       city_name = request.args.get("city")
-      temperature = City_temp(city_name)
+      temperature = city_temp(city_name)
       return render_template("response.html", city=city_name, temperature=temperature) # city and temperature are the value passed to HTML tempelate for rendering
