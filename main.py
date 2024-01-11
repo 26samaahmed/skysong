@@ -46,4 +46,4 @@ def sunrise_time(city: str):
   sys = data['sys']
   sunrise_utc = sys['sunrise']
   sunrise = datetime.fromtimestamp(sunrise_utc)
-  return f"Sunset is: {sunrise:%H:%M}"
+  return f"Sunrise is: {sunrise:%H:%M}"
