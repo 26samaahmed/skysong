@@ -33,7 +33,6 @@ def min_temp(city: str):
   min_temp = main['temp_min']
   return int(min_temp)
 
-# TODO: convert from military time to standard time
 def sunset_time(city: str):
   data = base_url(city)
   sys = data['sys']
@@ -42,9 +41,8 @@ def sunset_time(city: str):
   hour = sunset.hour
   if hour > 12:
     hour = hour - 12
-    am_pm = "PM"
   
-  return f"Sunset is at {hour}:{sunset:%M} PM" # Usinf %M to get the minute from the datetime object which is sunset
+  return f"Sunset is at {hour}:{sunset:%M} PM" # Using %M to get the minute from the datetime object which is sunset
 
 def sunrise_time(city: str):
   data = base_url(city)
