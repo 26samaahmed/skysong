@@ -39,11 +39,19 @@ def sunset_time(city: str):
   sys = data['sys']
   sunset_utc = sys['sunset']
   sunset = datetime.fromtimestamp(sunset_utc)
-  return f"Sunset is: {sunset:%H:%M}"
+  hour = sunset.hour
+  if hour > 12:
+    hour = hour - 12
+    am_pm = "PM"
+  
+  return f"Sunset is at {hour}:{sunset:%M} PM" # Usinf %M to get the minute from the datetime object which is sunset
 
 def sunrise_time(city: str):
   data = base_url(city)
   sys = data['sys']
   sunrise_utc = sys['sunrise']
   sunrise = datetime.fromtimestamp(sunrise_utc)
-  return f"Sunrise is: {sunrise:%H:%M}"
+  return f"Sunrise is at {sunrise:%H:%M} AM"
+
+print(sunset_time("Irvine"))
+print(sunrise_time("Irvine"))

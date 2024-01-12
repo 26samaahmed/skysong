@@ -17,7 +17,7 @@ def display():
     elif request.args.get("city") == '':
         return "Invalid, Please enter a city"
     
-    # If the user submitted a city then display the temperature by calling the function from main.py and pass the input as the function's arguments. The temperature will be returned.
+    # If the user submits a city then display the temperature by calling the function from main.py and pass the input as the function's arguments.
     else:
       city_name = request.args.get("city")
       temperature = city_temp(city_name)
