@@ -64,3 +64,15 @@ h1, h2, input{
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.low-temperature, .high-temperature{
+  display: inline-block;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.sunrise-text, .sunset-text {
+  display: inline-block;
+  padding-left: 15px;
+  padding-right: 15px;
+}

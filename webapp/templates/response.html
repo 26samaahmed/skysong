@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>Response</title>
-    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="static/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -12,10 +12,15 @@
     <div class="display-container">
       <p class="city_name">{{city}}</p>
       <p class="temperature">{{temperature}}ºC</p>
-      <p>LO:{{minimum_temperature}}ºC</p>
-      <p>HI:{{maximum_temperature}}ºC</p>
-      <p>{{sunrise}}</p>
-      <p>{{sunset}}</p>
+      <p class="low-temperature">LO:{{minimum_temperature}}ºC</p>
+      <p class="high-temperature">HI:{{maximum_temperature}}ºC</p>
+      <br>
+      <!--
+      <img class="sunrise-icon" src="static/images/surise.png">
+      <img class="sunrise-icon" src="static/images/sunset.png">
+      -->
+      <p class="sunrise-text">{{sunrise}}</p>
+      <p class="sunset-text">{{sunset}}</p>
     </div>
   </body>
 </html>
