@@ -1,10 +1,9 @@
 html {
   font-family: "Teko", sans-serif;
-  background-image: url(https://wallpapercave.com/wp/wp7595049.png);
-  height: 100%;
-  background-position: center;
+  background: rgb(95,131,255);
+  background: linear-gradient(0deg, rgba(95,131,255,1) 0%, rgba(0,0,0,1) 85%);
   background-repeat: no-repeat;
-  background-size: cover;
+  height: 100%;
 }
 
 h1, h2, input{
