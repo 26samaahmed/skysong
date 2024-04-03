@@ -1,5 +1,6 @@
 # .gitignore
 .env
 /example.json
+/song.json
 notes.md
 node_modules
