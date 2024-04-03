@@ -2,7 +2,6 @@ import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 import os
 from dotenv import load_dotenv
-import pandas as pd
 
 load_dotenv()
 
@@ -25,7 +24,7 @@ def get_tempo(playlist_id: str) -> dict:
     tracks.extend(playlist['items'])
 
   for track in tracks:
-    # Retrieve the tempo for each song using it's URI
+    # Retrieve the tempo for each song using its URI
     track_tempo[track['track']['name']] = spotify.audio_features(track['track']['uri'])[0]['tempo']
   return track_tempo
   
