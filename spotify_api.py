@@ -40,3 +40,12 @@ def get_access_token():
 
 def get_aut_headers(token):
     return {"Authorization": "Bearer " + token}
+
+
+#TODO: Retrieve spotify's daily playlist, get each track, and then get the tempo and store it somewhere
+# Storing it in a dic where the song is the key and the tempo is the value makes sense
+
+# These are 3 daily playlists with a variety of songs I listen to
+album_end_point1 = "https://api.spotify.com/v1/playlists/37i9dQZF1E36mu0j5Hw95G"
+album_end_point2 = "https://api.spotify.com/v1/playlists/37i9dQZF1E37LFLUC2Op3u"
+album_end_point3 = "https://api.spotify.com/v1/playlists/37i9dQZF1E36mCM83KV1pv"
