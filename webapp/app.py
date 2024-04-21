@@ -2,6 +2,7 @@
 from flask import Flask, render_template, request
 from markupsafe import escape
 from main import city_temp, min_temp, max_temp, sunset_time, sunrise_time
+from calculations import get_track_id, get_tempo
 
 app = Flask(__name__)
 
@@ -20,6 +21,7 @@ def display():
     # If the user submits a city then display the temperature by calling the function from main.py and pass the input as the function's arguments.
     else:
       city_name = request.args.get("city")
+      playlist_id = "https://open.spotify.com/playlist/37i9dQZF1E36mCM83KV1pv"
       temperature = city_temp(city_name)
       minimum_temp = min_temp(city_name)
       maximum_temp = max_temp(city_name)
