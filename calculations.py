@@ -33,7 +33,7 @@ def calculate_recommendation(playlist_id: str, city: str):
   
   for track in track_tempo:
     if temperature < 20 and track_tempo[track] < 120:
-      return f"{track}, {track_id[track]}"
+      return track_id[track]
       
     elif temperature > 20 and track_tempo[track] > 120:
-      return f"{track}, {track_id[track]}"
+      return track_id[track]

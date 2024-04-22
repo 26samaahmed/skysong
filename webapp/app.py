@@ -2,7 +2,7 @@
 from flask import Flask, render_template, request
 from markupsafe import escape
 from main import city_temp, min_temp, max_temp, sunset_time, sunrise_time
-from calculations import get_track_id, get_tempo
+from calculations import calculate_recommendation
 
 app = Flask(__name__)
 
@@ -27,4 +27,5 @@ def display():
       maximum_temp = max_temp(city_name)
       sunset = sunset_time(city_name)
       sunrise = sunrise_time(city_name)
-      return render_template("response.html", city=city_name, temperature=temperature, minimum_temperature=minimum_temp, maximum_temperature=maximum_temp, sunset=sunset, sunrise=sunrise) 
+      song_id = calculate_recommendation(playlist_id, city_name)
+      return render_template("response.html", city=city_name, temperature=temperature, minimum_temperature=minimum_temp, maximum_temperature=maximum_temp, sunset=sunset, sunrise=sunrise, song_id=song_id) 

@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
   </head>
   <body>
+
     <p class="logo">SkySong</p>
     <div class="display-container">
       <p class="city_name">{{city}}</p>
@@ -22,10 +23,9 @@
       <p class="sunrise-text">{{sunrise}}</p>
       <p class="sunset-text">{{sunset}}</p>
       <p>Recommended song of the hour</p>
-      <!--
-        Note: 4ppKRxity3jJd2hGoVyD4u is the track id. If i want to embed any song then I need its ID
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4ppKRxity3jJd2hGoVyD4u?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      -->
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/{{song_id}}?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+      </button>
     </div>
   </body>
 </html>
