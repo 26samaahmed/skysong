@@ -29,3 +29,4 @@ def display():
       sunrise = sunrise_time(city_name)
       song_id = calculate_recommendation(playlist_id, city_name)
       return render_template("response.html", city=city_name, temperature=temperature, minimum_temperature=minimum_temp, maximum_temperature=maximum_temp, sunset=sunset, sunrise=sunrise, song_id=song_id) 
+    
