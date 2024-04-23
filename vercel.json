@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "*.py", "use": "@vercel/python" },
+    { "src": "webapp/static/**/*", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/webapp/app.py" }
+  ]
+}
