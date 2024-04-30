@@ -1,6 +1,5 @@
 # Flask
 from flask import Flask, render_template, request
-from markupsafe import escape
 from main import city_temp, min_temp, max_temp, sunset_time, sunrise_time
 from calculations import calculate_recommendation
 
