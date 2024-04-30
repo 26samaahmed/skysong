@@ -1,11 +1,15 @@
 {
-  "version": 2,
   "builds": [
-    { "src": "*.py", "use": "@vercel/python" },
-    { "src": "webapp/static/**/*", "use": "@vercel/static" }
+    {
+      "src": "vercel_app/wsgi.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+    }
   ],
   "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/webapp/app.py" }
+    {
+      "src": "/(.*)",
+      "dest": "vercel_app/wsgi.py"
+    }
   ]
 }
