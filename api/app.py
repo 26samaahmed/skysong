@@ -3,9 +3,11 @@ from flask import Flask, render_template, request
 from main import city_temp, min_temp, max_temp, sunset_time, sunrise_time
 from calculations import calculate_recommendation
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='../templates',
+            static_folder='../static')
 
 @app.route('/')
+@app.route('/app')
 def display():
   # If requesting info about a specific city
   if request.method == "GET":
