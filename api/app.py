@@ -7,7 +7,6 @@ app = Flask(__name__, template_folder='../templates',
             static_folder='../static')
 
 @app.route('/')
-@app.route('/app')
 def display():
   # If requesting info about a specific city
   if request.method == "GET":
@@ -30,4 +29,6 @@ def display():
       sunrise = sunrise_time(city_name)
       song_id = calculate_recommendation(playlist_id, city_name)
       return render_template("response.html", city=city_name, temperature=temperature, minimum_temperature=minimum_temp, maximum_temperature=maximum_temp, sunset=sunset, sunrise=sunrise, song_id=song_id) 
-    
+
+if __name__ == '__main__':
+    app.run()
