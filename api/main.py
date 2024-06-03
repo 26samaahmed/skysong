@@ -10,7 +10,7 @@ BASE_URL = os.getenv("BASE_URL")
 
 # Helper function that makes the requests to be called in any function where data needs to be retrieved
 def base_url(city: str):
-  URL = BASE_URL + "q=" + city + "&units=metric" + "&appid=" + API_KEY
+  URL = BASE_URL + "?q=" + city + "&appid=" + API_KEY + "&units=metric"
   response = requests.get(URL)
   data = response.json() # Retrieve the data in json format
   return data
