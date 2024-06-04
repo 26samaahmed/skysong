@@ -1,7 +1,7 @@
 # Flask
 from flask import Flask, render_template, request
-from main import city_temp, min_temp, max_temp, sunset_time, sunrise_time
-from calculations import calculate_recommendation
+from api.main import city_temp, min_temp, max_temp, sunset_time, sunrise_time
+from api.calculations import calculate_recommendation
 
 app = Flask(__name__, template_folder='../templates',
             static_folder='../static')

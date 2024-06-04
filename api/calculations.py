@@ -2,7 +2,7 @@ import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 import os
 from dotenv import load_dotenv
-from main import city_temp
+from api.main import city_temp
 
 load_dotenv()
 
