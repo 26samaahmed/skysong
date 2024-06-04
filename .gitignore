@@ -1,6 +1,7 @@
-# .gitignore
+# Ignore all .cache files in all directories and subdirectories
+**/.cache
+
 venv/
 .env
 node_modules
 .vercel
-.cache
