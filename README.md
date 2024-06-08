@@ -5,4 +5,4 @@ Languages and Frameworks: Python, HTML, CSS, Flask <br>
 Libraries: Spotipy<br>
 APIs: Open Weather API, Spotify API <br> <br>
 
-Made with 💗 by Sama Ahmed
+made with 💚 by sama ahmed as my first official project!

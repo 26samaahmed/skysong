@@ -10,22 +10,22 @@
   <body>
 
     <p class="logo">SkySong</p>
-    <div class="display-container">
-      <p class="city_name">{{city}}</p>
-      <p class="temperature">{{temperature}}ºC</p>
-      <p class="low-temperature">LO:{{minimum_temperature}}ºC</p>
-      <p class="high-temperature">HI:{{maximum_temperature}}ºC</p>
+    <div id="display-result">
+      <p class="city-name">{{city}}</p>
+      <p id="temperature">{{temperature}}ºC</p>
+      <p id="low-temperature">LO: {{minimum_temperature}}ºC</p>
+      <p id="high-temperature">HI: {{maximum_temperature}}ºC</p>
       <br>
       <!--
       <img class="sunrise-icon" src="static/images/surise.png">
       <img class="sunrise-icon" src="static/images/sunset.png">
       -->
-      <p class="sunrise-text">{{sunrise}}</p>
-      <p class="sunset-text">{{sunset}}</p>
+      <p id="sunrise-text">{{sunrise}}</p>
+      <p id="sunset-text">{{sunset}}</p>
       <p>Recommended song of the hour</p>
       <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/{{song_id}}?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
       </button>
     </div>
+    <div id="footer">made with 💚 by <a href="https://github.com/26samaahmed" target="_blank">sama ahmed</a> as my first official project!</div>
   </body>
 </html>
