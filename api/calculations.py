@@ -1,6 +1,7 @@
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 import os
+import datetime
 from dotenv import load_dotenv
 from api.main import city_temp
 
@@ -11,7 +12,11 @@ SPOTIFY_CLIENT_SECRET=os.getenv("SPOTIFY_CLIENT_SECRET")
 
 spotify = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET))
 
+recommendation_history = {}
+today = datetime.datetime.now().strftime("%Y-%m-%d")
+
 def calculate_recommendation(playlist_id: str, city: str):
+  global recommendation_history, today
   track_tempo = {}
   track_id = {}
 
@@ -31,9 +36,20 @@ def calculate_recommendation(playlist_id: str, city: str):
 
   temperature = city_temp(city)
   
+  # Check if it's a new day and reset the recommendation history
+  current_date = datetime.datetime.now().strftime("%Y-%m-%d")
+  if current_date != today:
+    recommendation_history = {}
+    today = current_date
+
   for track in track_tempo:
     if temperature < 20 and track_tempo[track] < 120:
-      return track_id[track]
+      # Make sure that songs are not recommended more than once a day
+      if track not in recommendation_history:
+        recommendation_history[track] = today
+        return track_id[track]
       
     elif temperature > 20 and track_tempo[track] > 120:
-      return track_id[track]
+      if track not in recommendation_history:
+        recommendation_history[track] = today
+        return track_id[track]
